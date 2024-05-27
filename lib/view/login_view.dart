@@ -102,10 +102,16 @@ class _LoginViewState extends State<LoginView> {
                       Utils.flushBarErrorMessage(
                           "password length must be 6", context);
                     } else {
+                      // Map data = {
+                      //   'email': _emailController.text.toString(),
+                      //   'password': _passwordController.text.toString(),
+                      // };
+
                       Map data = {
-                        'email': _emailController.text.toString(),
-                        'password': _passwordController.text.toString(),
+                        'email': 'eve.holt@reqres.in',
+                        'password': 'cityslicka',
                       };
+
                       authViewModel.loginApi(data, context);
                       // ignore: avoid_print
                       print("api hit");
